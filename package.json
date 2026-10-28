@@ -1,0 +1,54 @@
+{
+  "name": "hookseal",
+  "version": "0.1.0",
+  "description": "Verify webhook signatures from GitHub, Stripe, Slack, Shopify, Twilio, Discord, Linear, Paddle, Zoom, Intercom and Standard Webhooks (Svix) with one API — constant-time, replay-safe, zero dependencies.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "webhook",
+    "signature",
+    "hmac",
+    "stripe",
+    "github",
+    "slack",
+    "shopify",
+    "twilio",
+    "svix",
+    "security"
+  ],
+  "author": "Yago de Jesus Martins",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yagodejesus/hookseal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yagodejesus/hookseal/issues"
+  },
+  "homepage": "https://github.com/yagodejesus/hookseal#readme",
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  }
+}
